@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdint.h>
+
+#define strtoint(d)   (*(char *)d >= 48) && (*(char *)d <= 57) 
+
+void atointeger( const char *string)
+{
+    uint32_t number=0;
+  //  printf("%c\n",*string);
+    while( strtoint(string) )
+    {
+        number = number*10 + (*string-48);
+      printf("%c\n",*string); 
+        string++;
+    }
+       printf("Interger  :%d\n",number);
+}
+int main() {
+	//code
+//	char data[] = "1234";
+	atointeger("123a4");
+	return 0;
+}
