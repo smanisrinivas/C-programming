@@ -1,0 +1,24 @@
+#include <stdio.h>
+// void fun(char *ptr[3][4]);
+void fun(char (*ptr)[3][4])
+{
+     for(int i=0;i<3;i++)
+    {
+    printf("Pointer addresss:%s\n",(*ptr)[i]);
+        
+    }
+}
+int main()
+{
+    char arr[3][4] ={"Man","PAN","HEN"};
+//   char arr[5][10] = {"PoojaS1", "PoojaS2", "PoojaS3", "PoojaS4", "PoojaS5"};
+    // char (*ptr)[3][4]=NULL;
+    
+    fun(&arr);
+    // for(int i=0;i<3;i++)
+    // {
+    // printf("Pointer addresss:%s\n",(*ptr)[i]);
+        
+    // }
+    return 0;
+}
